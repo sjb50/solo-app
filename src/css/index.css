@@ -18,11 +18,12 @@ code {
   text-align: center;
   margin-left: 10%;
   margin-right:10%;
-  margin-top: 0%;
+  margin-top: 0px;
   margin-bottom: 0%;
 }
 
 .content{
+  background:white;
   text-align: center;
   margin-left: 10%;
   margin-right:10%;
@@ -35,6 +36,7 @@ code {
 }
 
 .navMenu{
+  margin-bottom: 0%;
   background-color: yellow;
   overflow: hidden;
   text-alig: center;

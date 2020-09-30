@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link,NavLink,withRouter} from "react-router-dom"
+import {NavLink,Link,withRouter} from "react-router-dom"
 
 
 const Navbar =()=>{
   return(
-    <nav className="navMenu">
-      <NavLink className="navItem" to="/Home">Home</NavLink>
+    <nav className="navMenu" role="nav">
+      <NavLink className="navItem" to="/StoreFront">Store</NavLink>
       <NavLink className="navItem" to="/About">About</NavLink>
       <NavLink className="navItem" to="/Contact">Contact</NavLink>
     </nav>

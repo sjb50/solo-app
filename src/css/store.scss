@@ -1,10 +1,45 @@
-.store-item{
-  width:30%;
-  margin:1%;
-  border: 1px black solid;
-  color:blue;
-  float:left;
-  img{
-    width:100%;;
+#store-grid{
+ display: grid;
+ grid-template-columns:auto auto auto auto;
+ padding: 10px;
+ justify-content: space-evenly;
+ @media only screen and (max-width: 1200px) {
+   grid-template-columns:auto auto;
+ }
+ @media only screen and (max-width: 600px) {
+   grid-template-columns:auto;
+ }
+}
+
+.itemCard{
+  width:220px;
+  margin:2%;
+  background-color: lightblue;
+  .image-container{
+    margin-top:1%;
+    background-color: white;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+      img{
+        flex: none;
+      }
+    }
   }
+
+.item-name{
+  font-size: 16px;
+  text-decoration:none;
+  font-family: monospace;
+  color:black;
+  position: relative;
+  bottom:10px;
+}
+
+.item-price{
+  text-decoration: none;
+  float:right;
+  color:black;
+  margin:10px;
 }
