@@ -18,10 +18,6 @@ class StoreFront extends Component {
   render(){
   return(
     <div>
-      <form>
-        <input type="text" placeholder="Search...."/>
-        <input type="Submit" placeholder="Search...." value="search"/>
-      </form>
       <Product id ="store-grid" items={this.state.products}/>
     </div>
     )

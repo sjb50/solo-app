@@ -1,18 +1,15 @@
 import React,{Component} from 'react';
+// import {connect} from 'react-redux';
 
-class ItemViewer extends Component{
-  state={
-
-  }
-
-  componentDidMount() {
-  }
-  render(){
+const ItemViewer = (item) => {
+  const items = item.location
   return(
     <div>
-      <h1>{this.item}</h1>
+      <img src={"http://localhost:2000/"+items.image}></img>
+      <h1>{items.name}</h1>
+      <button>Add to cart</button>
     </div>
   )
-}}
+}
 
 export default ItemViewer;

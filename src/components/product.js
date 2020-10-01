@@ -1,15 +1,21 @@
 import React from 'react';
-import sweatshirt from "../store-images/sweatshirt.jpg"
-import Card from "react-bootstrap/Card";
-import {Link,withRouter} from "react-router-dom"
+import sweatshirt from '../store-images/sweatshirt.jpg';
+import Card from 'react-bootstrap/Card';
+import {Link,withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+
 
 
 const Product = ({items}) => {
-
   const itemList = items.map(item => {
   return(
     <div className="itemCard" key={item.Item_Number}>
-      <Link to="/ItemViewer">
+      <Link to={{
+        pathname:"/ItemViewer",
+        name:item.Item_Name,
+        image:item.Image_Name,
+
+      }}>
         <div className="image-container">
           <img variant="top" style={{height: "190px"}}  src={"http://localhost:2000/"+item.Image_Name} alt={item.Image_Name}/>
         </div>
@@ -26,4 +32,4 @@ const Product = ({items}) => {
   )
 }
 
-export default Product;
+export default connect()(Product);
